@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Dashboard Builder</h2>
+
+<div class="toolbar">
+
+<button onclick="addWidget('kpi')">Add KPI</button>
+<button onclick="addWidget('bar')">Add Bar</button>
+<button onclick="addWidget('line')">Add Line</button>
+<button onclick="addWidget('pie')">Add Pie</button>
+<button onclick="addWidget('scatter')">Add Scatter</button>
+
+<button onclick="saveLayout()">Save Layout</button>
+
+</div>
+
+<div class="grid-stack"></div>
+
+<script src="/static/js/builder.js"></script>
+
+{% endblock %}

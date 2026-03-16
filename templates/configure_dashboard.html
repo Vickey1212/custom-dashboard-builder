@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Configure Dashboard</h2>
+
+<button onclick="addWidget('kpi')">Add KPI</button>
+<button onclick="addWidget('bar')">Add Bar Chart</button>
+<button onclick="addWidget('pie')">Add Pie Chart</button>
+
+<div id="canvas"></div>
+
+<button onclick="saveDashboard()">Save</button>
+
+<script src="/static/js/widgets.js"></script>
+
+{% endblock %}

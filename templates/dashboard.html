@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Analytics Dashboard</h2>
+
+<div class="filters">
+
+<select id="dateFilter">
+
+<option value="all">All Time</option>
+<option value="today">Today</option>
+<option value="7">Last 7 Days</option>
+<option value="30">Last 30 Days</option>
+<option value="90">Last 90 Days</option>
+
+</select>
+
+<select id="productFilter">
+<option value="">All Products</option>
+</select>
+
+<select id="statusFilter">
+
+<option value="">All Status</option>
+<option value="Pending">Pending</option>
+<option value="In progress">In progress</option>
+<option value="Completed">Completed</option>
+
+</select>
+
+<input type="number" id="amountFilter" placeholder="Min Amount">
+
+<button onclick="loadDashboard()">Apply Filter</button>
+
+</div>
+
+<div class="grid-stack"></div>
+
+<script src="/static/js/dashboard.js"></script>
+
+{% endblock %}
